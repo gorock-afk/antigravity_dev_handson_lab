@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Antigravity × Gemini 4 Argon 오프닝 발표 장표</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif; }
+    html, body { width: 100vw; height: 100vh; overflow: hidden; background: #FFFFFF; color: #111827; }
+    .deck { width: 100vw; height: 100vh; position: relative; background: #FFFFFF; }
+    .slide {
+      display: none; width: 100%; height: 100%; padding: 44px 56px 64px;
+      flex-direction: column; justify-content: space-between; background: #FFFFFF;
+    }
+    .slide.active { display: flex; }
+    .slide.divider { background: #F8FAFC; justify-content: center; align-items: flex-start; padding-left: 84px; }
+    .tag { display: inline-flex; align-items: center; gap: 6px; background: #E8F0FE; color: #174EA6; font-weight: 800; font-size: 13px; padding: 5px 12px; border-radius: 99px; margin-bottom: 12px; }
+    h1 { font-size: clamp(28px, 3.6vw, 46px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.2; }
+    h2 { font-size: clamp(22px, 2.5vw, 32px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+    .sub { font-size: clamp(14px, 1.4vw, 18px); color: #374151; margin-top: 6px; }
+    .stage { flex: 1; margin-top: 22px; display: flex; align-items: stretch; gap: 18px; min-height: 0; }
+    .box { flex: 1; background: #F3F4F6; border: 1px solid #E5E7EB; padding: 20px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+    .box-hdr { background: #E8F0FE; color: #174EA6; font-weight: 800; font-size: 15px; padding: 8px 12px; border-radius: 6px; display: inline-block; align-self: flex-start; }
+    .box-hdr.slate { background: #E5E7EB; color: #111827; }
+    .shot-stage { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; background: #F9FAFB; border: 1px solid #E5E7EB; padding: 10px; }
+    .shot-stage img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px; }
+    table.stbl { width: 100%; border-collapse: collapse; font-size: clamp(13px, 1.2vw, 16px); background: #fff; }
+    table.stbl th, table.stbl td { border: 1px solid #D1D5DB; padding: 12px 14px; text-align: left; }
+    table.stbl th { background: #E8F0FE; color: #174EA6; font-weight: 800; }
+    .hud-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; height: 42px;
+      background: #F9FAFB; border-top: 1px solid #E5E7EB;
+      display: flex; align-items: center; justify-content: space-between; padding: 0 24px;
+      font-size: 12.5px; color: #4B5563; z-index: 20;
+    }
+    .hud-btns button {
+      background: #FFFFFF; border: 1px solid #D1D5DB; border-radius: 5px;
+      padding: 4px 10px; font-weight: 700; cursor: pointer; margin-left: 6px;
+    }
+    :fullscreen .hud-bar, :-webkit-full-screen .hud-bar { display: none !important; }
+    @media (display-mode: fullscreen) { .hud-bar { display: none !important; } .slide { padding-bottom: 44px; } }
+  </style>
+</head>
+<body>
+  <div class="deck" id="deck">
+    <!-- Slide 0 -->
+    <section class="slide divider active" data-title="오프닝 · 강의 목표">
+      <span class="tag">🚀 GOOGLE ANTIGRAVITY × GEMINI 4 ARGON</span>
+      <h1>Argon 강점 체험 및<br>Antigravity 편의 기능 핸즈온</h1>
+      <p class="sub" style="margin-top:16px;">단일 프롬프트 3D·벤치마크 비교부터 크롬 자율 디버깅, 멀티에이전트 분업까지 (90분 기본 / 180분 심화)</p>
+    </section>
+
+    <!-- Slide 1 -->
+    <section class="slide" data-title="전체 커리큘럼 로드맵">
+      <div><span class="tag">🗺️ CURRICULUM</span><h2>전체 실습 일정 (90분 압축 ↔ 180분 심화 탄력 운영)</h2></div>
+      <div class="stage">
+        <table class="stbl" style="align-self:center;">
+          <thead><tr><th>파트</th><th>시간 (기본 / 심화)</th><th>핵심 실습 목표</th><th>주요 기능</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Part 0. 환경 세팅 &amp; 제어</strong></td><td>10분 / 20분</td><td>기업 계정 로그인 전원 완주 (CLI · AGY 2.0 · VS Code) &amp; 실시간 조향</td><td>Use Business Account, Turbo, /btw</td></tr>
+            <tr><td><strong>Part 1. 자율 디버깅 루프</strong></td><td>30분 / 55분</td><td>역질문 인터뷰 ➔ 플랜 인라인 첨삭 ➔ 크롬 E2E 자동 패치 ➔ 인라인 위젯</td><td>/grill-me, /plan, /browser, /goal, /generative_ui</td></tr>
+            <tr><td><strong>Part 2. Argon &amp; 3D 비교</strong></td><td>30분 / 60분</td><td>3.8 Flash ↔ 4 Argon 전환 · 벤치마크 태스크 · Claude 대비 토큰 효율 데모</td><td>Gemini 4 Argon, /token-stats, 2×2 3D Arena</td></tr>
+            <tr><td><strong>Part 3. 멀티에이전트 자산화</strong></td><td>20분 / 45분</td><td>Worker 1➔2 교차 검증 · 파일 독점 병렬 구현 · 규칙 저장 &amp; 플러그인 패키징</td><td>/boost, /teamwork, /learn, /plugin</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide divider" data-title="Part 0 · 환경 세팅 & 무중단 제어">
+      <span class="tag">🪪 PART 0 · 10 MIN</span>
+      <h1>기업 계정 로그인 완주 &amp;<br>3대 개발 표면 · 무중단 제어</h1>
+      <p class="sub" style="margin-top:14px;">Antigravity CLI · Antigravity 2.0 · VS Code Extension 전원 로그인 체크포인트</p>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide" data-title="3대 개발 표면 기업 로그인">
+      <div><span class="tag">🪪 PART 0-1</span><h2>Use Business Account ➔ Continue with Google Cloud</h2></div>
+      <div class="stage">
+        <div class="shot-stage"><img src="../assets/screenshots/part0_three_surfaces_login.png" alt="3대 표면 로그인" /></div>
+      </div>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide" data-title="무중단 에이전트 제어 (Turbo · /btw)">
+      <div><span class="tag">⚡ PART 0-2</span><h2>작업 흐름을 끊지 않는 실시간 조향 (Send Immediately · /btw)</h2></div>
+      <div class="stage">
+        <div class="shot-stage"><img src="../assets/screenshots/part0_live_steering_controls.png" alt="무중단 제어" /></div>
+      </div>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="slide divider" data-title="Part 1 · 설계 ~ 브라우저 디버깅 루프">
+      <span class="tag">🌐 PART 1 · 30 MIN</span>
+      <h1>설계 인터뷰부터 크롬 E2E<br>자율 디버깅 루프까지</h1>
+      <p class="sub" style="margin-top:14px;">/grill-me · /plan · /browser · /goal · /generative_ui</p>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="slide" data-title="/grill-me & /plan 인라인 검수">
+      <div><span class="tag">📐 PART 1-1</span><h2>코딩 전 역질문 인터뷰(/grill-me) &amp; 줄 단위 코멘트 검수(/plan)</h2></div>
+      <div class="stage">
+        <div class="shot-stage"><img src="../assets/screenshots/part1_grill_and_plan.png" alt="grill-me & plan" /></div>
+      </div>
+    </section>
+
+    <!-- Slide 7 -->
+    <section class="slide" data-title="/browser · /goal · /generative_ui">
+      <div><span class="tag">🎯 PART 1-2</span><h2>크롬 자동 클릭·콘솔 패치(/browser · /goal) &amp; 인라인 위젯(/generative_ui)</h2></div>
+      <div class="stage">
+        <div class="shot-stage"><img src="../assets/screenshots/part1_browser_goal_genui.png" alt="browser & goal" /></div>
+      </div>
+    </section>
+
+    <!-- Slide 8 -->
+    <section class="slide divider" data-title="Part 2 · 모델 & 3D 생성 비교">
+      <span class="tag">🧪 PART 2 · 30 MIN</span>
+      <h1>Gemini 3.8 Flash vs 4 Argon<br>3D·물리 구현 &amp; 토큰 효율 비교</h1>
+      <p class="sub" style="margin-top:14px;">실시간 모델 전환 · 강점 벤치마크 프롬프팅 · Claude Opus 5.5 대비 토큰 아웃풋 데모</p>
+    </section>
+
+    <!-- Slide 9 -->
+    <section class="slide" data-title="3.8 Flash ↔ 4 Argon 전환 및 토큰 계측">
+      <div><span class="tag">🔄 PART 2-1</span><h2>단일 프롬프트 3D·물리 비교 및 로컬 transcript.jsonl 토큰 확인</h2></div>
+      <div class="stage">
+        <div class="shot-stage"><img src="../assets/screenshots/part2_flash_vs_argon_tokens.png" alt="Flash vs Argon" /></div>
+      </div>
+    </section>
+
+    <!-- Slide 10 -->
+    <section class="slide" data-title="벤치마크 & Claude 대비 토큰 효율 데모">
+      <div><span class="tag">📊 PART 2-2 · DEMO</span><h2>Argon·Carbon 강점 벤치마크 &amp; Claude Opus 5.5 대비 3D 토큰 효율</h2></div>
+      <div class="stage">
+        <div class="shot-stage"><img src="../assets/screenshots/part2_benchmark_and_opus_demo.png" alt="벤치마크 및 토큰 비교" /></div>
+      </div>
+    </section>
+
+    <!-- Slide 11 -->
+    <section class="slide divider" data-title="Part 3 · 멀티에이전트 분업 & 팀 자산화">
+      <span class="tag">⚖️ PART 3 · 20 MIN</span>
+      <h1>멀티에이전트 교차 검증·병렬 분업<br>및 팀 규칙·플러그인 자산화</h1>
+      <p class="sub" style="margin-top:14px;">/boost · /teamwork · /learn · /plugin</p>
+    </section>
+
+    <!-- Slide 12 -->
+    <section class="slide" data-title="/boost vs /teamwork 아키텍처">
+      <div><span class="tag">🧭 PART 3-1</span><h2>과제 결합도에 따른 멀티에이전트 선택 기준 (/boost vs /teamwork)</h2></div>
+      <div class="stage">
+        <div class="shot-stage"><img src="../assets/screenshots/boost_vs_teamwork_architecture.png" alt="boost vs teamwork" /></div>
+      </div>
+    </section>
+
+    <!-- Slide 13 -->
+    <section class="slide" data-title="Worker 1➔2 검증 & Subagent 제어">
+      <div><span class="tag">🛠️ PART 3-2</span><h2>추론 폐기 교차 검증(/boost) &amp; 파일 독점 병렬 구현(/teamwork)</h2></div>
+      <div class="stage">
+        <div class="shot-stage"><img src="../assets/screenshots/part3_boost_teamwork_ui.png" alt="멀티에이전트 실행 UI" /></div>
+      </div>
+    </section>
+
+    <!-- Slide 14 -->
+    <section class="slide" data-title="/learn 규칙 저장 & /plugin 패키징">
+      <div><span class="tag">📦 PART 3-3</span><h2>검증된 코딩·테스트 규칙 영구 저장(/learn) 및 팀 플러그인 배포(/plugin)</h2></div>
+      <div class="stage">
+        <div class="shot-stage"><img src="../assets/screenshots/part3_learn_and_plugin.png" alt="learn & plugin" /></div>
+      </div>
+    </section>
+
+    <!-- Slide 15 -->
+    <section class="slide divider" data-title="마무리 · 실무 적용 요약">
+      <span class="tag">✅ READY TO BUILD</span>
+      <h1>Thank you</h1>
+      <p class="sub" style="margin-top:14px;">지금 바로 아래 핸즈온 실습 카드에서 Lab 0 로그인부터 순서대로 시작해보세요.</p>
+    </section>
+  </div>
+
+  <div class="hud-bar">
+    <div id="slideIndicator">Slide 1 / 16 · 오프닝 · 강의 목표</div>
+    <div class="hud-btns">
+      <button onclick="go(idx - 1)">◀ 이전</button>
+      <button onclick="go(idx + 1)">다음 ▶</button>
+      <button onclick="toggleFS()">⛶ 전체화면 (F)</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let idx = 0;
+    function go(n) {
+      idx = Math.max(0, Math.min(slides.length - 1, n));
+      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      const title = slides[idx].dataset.title || '';
+      document.getElementById('slideIndicator').textContent = `Slide ${idx + 1} / ${slides.length} · ${title}`;
+      window.parent.postMessage({ type: 'slideChanged', index: idx, total: slides.length, title }, '*');
+    }
+    function toggleFS() {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+    window.addEventListener('keydown', e => {
+      if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); go(idx + 1); }
+      if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); go(idx - 1); }
+      if (e.key === 'f' || e.key === 'F') toggleFS();
+    });
+    window.addEventListener('message', e => {
+      if (e.data && e.data.type === 'goToSlide') go(Number(e.data.index) || 0);
+    });
+  </script>
+</body>
+</html>
