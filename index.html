@@ -87,7 +87,7 @@
     .sec-head h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-top: 4px; }
     .sec-head p { color: var(--muted); font-size: 14.5px; max-width: 760px; margin-top: 4px; }
 
-    /* Presentation Stage (lgchem style) */
+    /* Presentation Stage */
     .deck-shell {
       display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 16px;
       background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px;
@@ -142,13 +142,6 @@
     }
     .file-card:hover { border-color: var(--blue); }
     .file-tag { font-size: 11px; font-weight: 800; color: var(--blue); background: var(--blue-soft); padding: 2px 8px; border-radius: 5px; align-self: flex-start; }
-
-    /* 3D Benchmark Arena */
-    .arena-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 14px; }
-    @media (max-width: 900px) { .arena-stats { grid-template-columns: 1fr 1fr; } }
-    .stat-tile { background: var(--surface); border: 1px solid var(--line); padding: 14px 16px; border-radius: 10px; }
-    .stat-tile strong { font-size: 18px; display: block; margin-top: 4px; }
-    .arena-frame { width: 100%; height: 650px; border: 1px solid #CBD5E1; border-radius: 12px; background: #fff; }
 
     /* Hands-On Labs Layout */
     .labs-layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 24px; align-items: start; }
@@ -208,7 +201,6 @@
         <a href="#presentation">오프닝 장표</a>
         <a href="#agenda">일정</a>
         <a href="#files">실습파일</a>
-        <a href="#demo3d">3D 토큰 비교 데모</a>
         <a href="#labs">실습 Lab 0~3</a>
       </nav>
       <div class="top-cta">
@@ -223,17 +215,17 @@
     <div class="container">
       <div class="eyebrow">GOOGLE ANTIGRAVITY 2.0 · CLI · VS CODE EXTENSION × GEMINI 4 ARGON</div>
       <h1>Argon의 장점 체험 및<br>Antigravity만의 편의 기능 실습</h1>
-      <p class="hero-lead">기업 계정 로그인 완주부터 /grill-me · /plan · /browser 자율 디버깅 루프, 단일 프롬프트 3D·벤치마크 비교, 그리고 /boost · /teamwork · /learn · /plugin 팀 자산화까지 한 페이지에서 진행합니다.</p>
+      <p class="hero-lead">기업 계정 로그인 완주부터 /grill-me · /plan · /browser 자율 디버깅 루프, 모델 체급 전환·실무 벤치마크 프롬프팅, 그리고 /boost · /teamwork · /learn · /plugin 팀 자산화까지 한 페이지에서 진행합니다.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#labs">🚀 바로 Lab 0 실습 시작</a>
         <a class="btn" href="AGY_Dev_Workshop_Files.zip" download>📦 AGY_Dev_Workshop_Files.zip 다운로드</a>
-        <a class="btn" href="#demo3d">🧊 Claude vs Gemini 4 토큰·3D 비교 데모 보기</a>
+        <a class="btn" href="AGY_Dev_Workshop_Slides.pdf" target="_blank">📑 강의 장표 PDF 열기</a>
         <a class="btn" href="https://gorock-afk.github.io/antigravity_dev_workshop/" target="_blank">📖 클래식 리더형 가이드 열기 ↗</a>
       </div>
       <div class="hero-meta">
         <div class="meta-card"><span>운영 시간</span><strong>90분 압축 ↔ 180분 심화</strong></div>
         <div class="meta-card"><span>필수 체크포인트</span><strong>3대 표면 기업 계정 로그인</strong></div>
-        <div class="meta-card"><span>모델 비교</span><strong>3.8 Flash · 4 Argon · 4 Carbon · Opus 5.5</strong></div>
+        <div class="meta-card"><span>모델 전환 &amp; 벤치마크</span><strong>3.8 Flash ↔ 4 Argon · /token-stats</strong></div>
         <div class="meta-card"><span>멀티에이전트 &amp; 자산화</span><strong>/boost · /teamwork · /learn · /plugin</strong></div>
       </div>
     </div>
@@ -269,9 +261,9 @@
             <button class="deck-jump" onclick="jumpSlide(5)">06. [Part 1] 자율 디버깅 루프</button>
             <button class="deck-jump" onclick="jumpSlide(6)">07. /grill-me &amp; /plan 인라인 검수</button>
             <button class="deck-jump" onclick="jumpSlide(7)">08. /browser · /goal · /generative_ui</button>
-            <button class="deck-jump" onclick="jumpSlide(8)">09. [Part 2] 모델 &amp; 3D 생성 비교</button>
+            <button class="deck-jump" onclick="jumpSlide(8)">09. [Part 2] 모델 전환 &amp; 실무 벤치마크</button>
             <button class="deck-jump" onclick="jumpSlide(9)">10. 3.8 Flash ↔ 4 Argon 전환 &amp; 토큰</button>
-            <button class="deck-jump" onclick="jumpSlide(10)">11. 벤치마크 &amp; Claude 토큰 비교 데모</button>
+            <button class="deck-jump" onclick="jumpSlide(10)">11. 실무 벤치마크 &amp; 70:30 토큰 전략</button>
             <button class="deck-jump" onclick="jumpSlide(11)">12. [Part 3] 멀티에이전트 &amp; 자산화</button>
             <button class="deck-jump" onclick="jumpSlide(12)">13. /boost vs /teamwork 아키텍처</button>
             <button class="deck-jump" onclick="jumpSlide(13)">14. Worker 1➔2 검증 &amp; Subagents</button>
@@ -301,8 +293,8 @@
       <div class="timeline-bar">
         <div class="tl-seg" style="flex:10;background:#E8F0FE;color:#174EA6;">Part 0 · <span class="t-p0">10분</span></div>
         <div class="tl-seg" style="flex:30;background:#174EA6;color:#FFFFFF;">Part 1 · 설계~브라우저 루프 (<span class="t-p1">30분</span>)</div>
-        <div class="tl-seg" style="flex:30;background:#0F172A;color:#F8FAFC;">Part 2 · Argon·3D·벤치마크 (<span class="t-p2">30분</span>)</div>
-        <div class="tl-seg" style="flex:20;background:#E6F4EA;color:#0D652D;">Part 3 · 멀티에이전트 (<span class="t-p3">20분</span>)</div>
+        <div class="tl-seg" style="flex:25;background:#0F172A;color:#F8FAFC;">Part 2 · Argon·벤치마크 (<span class="t-p2">25분</span>)</div>
+        <div class="tl-seg" style="flex:25;background:#E6F4EA;color:#0D652D;">Part 3 · 멀티에이전트 (<span class="t-p3">25분</span>)</div>
       </div>
 
       <div class="agenda-grid">
@@ -326,16 +318,16 @@
           </ul>
         </div>
         <div class="ag-card">
-          <span class="ag-time">Part 2 · <span class="t-p2">30분</span></span>
-          <h3>모델 &amp; 3D 생성 · 벤치마크</h3>
+          <span class="ag-time">Part 2 · <span class="t-p2">25분</span></span>
+          <h3>모델 전환 &amp; 실무 벤치마크</h3>
           <ul>
-            <li><strong>3.8 Flash ↔ 4 Argon</strong> 단일 프롬프트 3D 비교</li>
-            <li>Argon·Carbon 강점 벤치마크 태스크 실습</li>
-            <li><strong>[데모]</strong> Claude Opus 5.5 vs Carbon·Argon 토큰 대비 아웃풋</li>
+            <li><strong>3.8 Flash ↔ 4 Argon</strong> 관제 대시보드 비교</li>
+            <li>설계도➔운영 콘솔 &amp; 정산 동시성 취약점 감사</li>
+            <li>로컬 <strong>/token-stats</strong> 계측 &amp; 70:30 쿼터 최적화</li>
           </ul>
         </div>
         <div class="ag-card">
-          <span class="ag-time">Part 3 · <span class="t-p3">20분</span></span>
+          <span class="ag-time">Part 3 · <span class="t-p3">25분</span></span>
           <h3>멀티에이전트 &amp; 팀 자산화</h3>
           <ul>
             <li><strong>/boost</strong> Worker 1 ➔ Worker 2 새 컨텍스트 검증</li>
@@ -354,15 +346,15 @@
         <div>
           <span class="sec-kicker">Starter Kit</span>
           <h2>실습 준비 &amp; 예제 파일 다운로드</h2>
-          <p>번들 ZIP 하나만 내려받아 빈 폴더(예: <code>C:\dev\agy-workshop</code>)에 압축 해제한 뒤 Antigravity에서 열면 준비 끝입니다.</p>
+          <p>번들 ZIP 하나만 내려받아 빈 폴더(예: <code>C:\devgy-workshop</code>)에 압축 해제한 뒤 Antigravity에서 열면 준비 끝입니다.</p>
         </div>
       </div>
 
       <div class="bundle-banner">
         <div>
           <span class="pill-ok">원클릭 전체 번들</span>
-          <h3 style="font-size:19px;margin-top:6px;">AGY_Dev_Workshop_Files.zip (전 파트 실습 예제 4종 포함)</h3>
-          <p style="font-size:13.5px;color:var(--muted);margin-top:3px;">칸반 디버깅 웹앱 · 평면도 블루프린트 도면 · 정산 동시성 버그 코드 · 로컬 토큰 집계 스킬 포함</p>
+          <h3 style="font-size:19px;margin-top:6px;">AGY_Dev_Workshop_Files.zip (전 파트 실습 예제 포함)</h3>
+          <p style="font-size:13.5px;color:var(--muted);margin-top:3px;">칸반 디버깅 웹앱 · 정산 운영 콘솔 설계도 · 정산 동시성 버그 코드 · 로컬 토큰 집계 스킬 포함</p>
         </div>
         <div style="display:flex;gap:8px;">
           <a class="btn btn-primary" href="AGY_Dev_Workshop_Files.zip" download>📦 전체 실습파일 ZIP 다운로드</a>
@@ -375,8 +367,8 @@
           <div><span class="file-tag">Part 1 · /browser &amp; /goal</span><h4 style="margin-top:8px;">01_buggy_kanban_app.html</h4><p style="font-size:12.5px;color:var(--muted);margin-top:4px;">숨겨진 콘솔 에러·문자열 합산·NaN% 버그 3건이 심어진 칸반 웹앱</p></div>
           <span style="font-size:12px;font-weight:700;color:var(--blue);">개별 다운로드 ↓</span>
         </a>
-        <a class="file-card" href="files/02_floorplan_blueprint_spec.png" download>
-          <div><span class="file-tag">Part 2 · Blueprint-Bench</span><h4 style="margin-top:8px;">02_floorplan_blueprint_spec.png</h4><p style="font-size:12.5px;color:var(--muted);margin-top:4px;">12m×8m 5개 구역 R&amp;D 랩 실내 평면도 (2D➔3D 공간 재구성용)</p></div>
+        <a class="file-card" href="files/02_system_wireframe_spec.png" download>
+          <div><span class="file-tag">Part 2 · Spec-to-Code</span><h4 style="margin-top:8px;">02_system_wireframe_spec.png</h4><p style="font-size:12.5px;color:var(--muted);margin-top:4px;">정산 이상 거래 검수 &amp; 상태 전이 운영 콘솔 화면 설계도</p></div>
           <span style="font-size:12px;font-weight:700;color:var(--blue);">개별 다운로드 ↓</span>
         </a>
         <a class="file-card" href="files/02_legacy_payment_service.py" download>
@@ -391,46 +383,7 @@
     </div>
   </section>
 
-  <!-- SECTION 4: LIVE 4-MODEL 3D TOKEN BENCHMARK ARENA -->
-  <section class="section" id="demo3d">
-    <div class="container">
-      <div class="sec-head">
-        <div>
-          <span class="sec-kicker">Part 2 Instructor Demo &amp; Interactive Arena</span>
-          <h2>[데모] Claude Opus 5.5 vs Gemini 4 Carbon · Argon · 3.8 Flash 토큰 대비 3D 아웃풋</h2>
-          <p>Claude 접근 권한이 없는 환경에서도 동일 10개 Pure-3D 과제의 실제 소비 토큰·코드 줄 수·웹GL 결과물을 2×2 화면으로 직접 돌려보며 비교할 수 있습니다.</p>
-        </div>
-        <a class="btn btn-primary" href="demo3d/index.html" target="_blank">새 탭에서 전체 화면으로 열기 ↗</a>
-      </div>
-
-      <div class="arena-stats">
-        <div class="stat-tile" style="border-left:4px solid var(--red);">
-          <span style="font-size:12px;color:var(--sub);font-weight:700;">Claude Opus 5.5 (10-Set 합산)</span>
-          <strong style="color:var(--red);">1,092.1K tok · 8,651줄</strong>
-          <span style="font-size:12px;color:var(--muted);">7.9줄 / 1K tok · 총 $21.25</span>
-        </div>
-        <div class="stat-tile" style="border-left:4px solid var(--green);">
-          <span style="font-size:12px;color:var(--sub);font-weight:700;">Gemini 4 Carbon (최고 밀도)</span>
-          <strong style="color:var(--green);">846.5K tok · 23,111줄</strong>
-          <span style="font-size:12px;color:var(--muted);">Opus 대비 토큰 -22% · 코드량 2.67배</span>
-        </div>
-        <div class="stat-tile" style="border-left:4px solid var(--blue);">
-          <span style="font-size:12px;color:var(--sub);font-weight:700;">Gemini 4 Argon (최고 토큰 효율)</span>
-          <strong style="color:var(--blue);">515.7K tok · 17,357줄</strong>
-          <span style="font-size:12px;color:var(--muted);">Opus 대비 토큰 -53% · 코드량 2.01배 ($5.94)</span>
-        </div>
-        <div class="stat-tile" style="border-left:4px solid #475569;">
-          <span style="font-size:12px;color:var(--sub);font-weight:700;">Gemini 3.8 Flash (초고속 가성비)</span>
-          <strong>550.5K tok · 9,498줄</strong>
-          <span style="font-size:12px;color:var(--muted);">~241 tok/s · 10세트 합산 단 $1.26</span>
-        </div>
-      </div>
-
-      <iframe class="arena-frame" src="demo3d/index.html" title="4-Model 3D Token vs Output Arena" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <!-- SECTION 5: STEP-BY-STEP HANDS-ON LABS -->
+  <!-- SECTION 4: STEP-BY-STEP HANDS-ON LABS -->
   <section class="section" id="labs">
     <div class="container">
       <div class="sec-head">
@@ -482,7 +435,7 @@
                   <div class="chips"><span class="chip">/btw <small>Tab ⇥</small></span></div>
                   <button class="cbtn" onclick="copyText(this)">프롬프트 복사</button>
                 </div>
-                <div class="ptxt">현재 폴더 안의 실습 파일 4개 이름과 각각의 역할을 한 줄씩 요약해줘</div>
+                <div class="ptxt">현재 폴더 안의 실습 파일 이름과 각각의 역할을 한 줄씩 요약해줘</div>
               </div>
               <img class="zoom-shot" src="assets/screenshots/part0_live_steering_controls.png" alt="무중단 제어 화면" />
             </div>
@@ -549,41 +502,41 @@
           <!-- LAB 2 -->
           <article class="lab-card" id="lab2">
             <div class="lab-hdr">
-              <div><span class="lab-badge">LAB 2 · ARGON 체감</span><h3 style="font-size:21px;margin-top:6px;">Gemini 3.8 Flash ↔ 4 Argon 전환 &amp; 강점 벤치마크 프롬프팅</h3></div>
-              <span class="pill-ok">3D·물리 · Blueprint-Bench · Vals</span>
+              <div><span class="lab-badge">LAB 2 · ARGON 체감</span><h3 style="font-size:21px;margin-top:6px;">Gemini 3.8 Flash ↔ 4 Argon 전환 &amp; 실무 벤치마크 프롬프팅</h3></div>
+              <span class="pill-ok">Spec-to-Code · Vals · ExploitGym</span>
             </div>
 
             <div class="lab-step">
-              <h4><span>Step 2-1. Flash vs Argon 전환하며 단일 프롬프트 3D·물리 웹앱 비교</span></h4>
+              <h4><span>Step 2-1. Flash vs Argon 전환하며 실시간 API 관제 대시보드 구현 비교</span></h4>
               <ul class="step-ol">
-                <li>1️⃣ 모델을 <strong>Gemini 3.8 Flash</strong>와 <strong>Gemini 4 Argon</strong>으로 각각 바꿔 동일 프롬프트를 실행하고 물리 탄성·광원 디테일 차이를 체감합니다.</li>
-                <li>2️⃣ CLI의 <code>/context</code> 또는 <code>03_token_stats_SKILL.md</code>(<code>/token-stats</code>)로 실제 입출력 토큰과 코드 줄 수를 비교합니다.</li>
+                <li>1️⃣ 모델을 <strong>Gemini 3.8 Flash</strong>와 <strong>Gemini 4 Argon</strong>으로 각각 바꿔 동일 프롬프트를 실행하고 응답 속도와 상태 머신·통계 로직 깊이를 비교합니다.</li>
+                <li>2️⃣ CLI의 <code>/context</code> 또는 <code>03_token_stats_SKILL.md</code>(<code>/token-stats</code>)로 실제 입출력 토큰과 코드 줄 수를 확인합니다.</li>
               </ul>
               <div class="pcard">
                 <div class="pcard-bar">
                   <div class="chips"><span class="chip">Model: Gemini 3.8 Flash ↔ Gemini 4 Argon</span></div>
                   <button class="cbtn" onclick="copyText(this)">프롬프트 복사</button>
                 </div>
-                <div class="ptxt">단일 HTML 파일로 마우스로 찌르면 탱글탱글하게 출렁이고 광원 굴절과 그림자가 살아있는 3D 반투명 젤리 로봇 시뮬레이터를 만들어줘</div>
+                <div class="ptxt">단일 HTML 파일로 서비스별 응답 지연 차트와 에러율 임계치 알림, 서킷브레이커 상태 전환 시뮬레이터가 작동하는 실시간 API 관제 대시보드를 만들어줘</div>
               </div>
-              <img class="zoom-shot" src="assets/screenshots/part2_flash_vs_argon_tokens.png" alt="Flash vs Argon 전환" />
+              <img class="zoom-shot" src="assets/screenshots/part2_flash_vs_argon_web.png" alt="Flash vs Argon 전환" />
             </div>
 
             <div class="lab-step">
-              <h4><span>Step 2-2. Argon &amp; Carbon 고득점 벤치마크 태스크 실습 (도면➔3D &amp; 동시성 감사)</span></h4>
+              <h4><span>Step 2-2. Argon &amp; Carbon 고득점 벤치마크 태스크 실습 (설계도➔콘솔 &amp; 동시성 감사)</span></h4>
               <ul class="step-ol">
-                <li>1️⃣ <strong>Blueprint-Bench 2 실습:</strong> <code>02_floorplan_blueprint_spec.png</code> 평면도를 첨부해 5개 존과 조명 토글이 살아있는 3D 공간 뷰어로 재구성합니다.</li>
-                <li>2️⃣ <strong>복합 트랜잭션 감사 실습:</strong> <code>02_legacy_payment_service.py</code>의 멀티스레드 잔액 붕괴·부동소수점·부분 환불 결함 4종을 한 번에 패치합니다.</li>
+                <li>1️⃣ <strong>화면 설계도 ➔ 코드 구현:</strong> <code>02_system_wireframe_spec.png</code> 와이어프레임을 첨부해 상태 전이·고액 승인 가드레일·감사 로그가 작동하는 정산 운영 콘솔을 구현합니다.</li>
+                <li>2️⃣ <strong>복합 트랜잭션 감사 실습:</strong> <code>02_legacy_payment_service.py</code>의 멀티스레드 잔액 붕괴·부동소수점·부분 환불·멱등성 결함 4종을 한 번에 패치합니다.</li>
               </ul>
               <div class="pcard">
                 <div class="pcard-bar">
                   <div class="chips">
                     <span class="chip">Model: Gemini 4 Argon</span>
-                    <span class="chip">@02_floorplan_blueprint_spec.png</span>
+                    <span class="chip">@02_system_wireframe_spec.png</span>
                   </div>
                   <button class="cbtn" onclick="copyText(this)">프롬프트 복사</button>
                 </div>
-                <div class="ptxt">첨부한 평면도 치수와 5개 구역 사양을 그대로 반영해 조감도·1인칭 시점 전환과 주야간 조명 토글이 작동하는 3D 공간 뷰어를 단일 HTML로 만들어줘</div>
+                <div class="ptxt">첨부한 화면 설계도와 4대 비즈니스 규칙을 그대로 반영해 상태 필터와 고위험 거래 보류 처리, 감사 로그 내보내기가 작동하는 정산 운영 콘솔을 단일 HTML로 만들어줘</div>
               </div>
               <div class="pcard">
                 <div class="pcard-bar">
@@ -596,13 +549,13 @@
                 <div class="ptxt">이 정산 코드의 동시성 경쟁과 금액 정밀도, 부분 환불 취약점을 모두 찾아 수정하고 멀티스레드 테스트로 검증해줘</div>
               </div>
               <div class="two-shots">
-                <img class="zoom-shot" src="assets/screenshots/part2_blueprint_spec.png" alt="평면도 스펙" />
-                <img class="zoom-shot" src="assets/screenshots/part2_benchmark_and_opus_demo.png" alt="벤치마크 & 토큰 실측" />
+                <img class="zoom-shot" src="assets/screenshots/part2_arch_wireframe_spec.png" alt="설계도 스펙" />
+                <img class="zoom-shot" src="assets/screenshots/part2_benchmarks_and_tokens.png" alt="벤치마크 & 토큰 전략" />
               </div>
 
               <details class="deep-dive">
-                <summary>🔥 [3시간 과정용 심화 미션] 수리 물리 벤치마크 — 다중 강체 충돌 &amp; 파동 시뮬레이터</summary>
-                <p>Gemini 4 Argon에서 수십 개의 구체가 수면 위에서 부력과 파동 간섭을 일으키며 충돌하는 실시간 WebGL 물리 엔진을 단일 파일로 구현하고 FPS·에너지 보존 지표를 HUD로 띄워보세요.</p>
+                <summary>🔥 [3시간 과정용 심화 미션] 1M Output 활용 — REST API 래퍼 &amp; 50스레드 스트레스 리포트 일괄 생성</summary>
+                <p>Gemini 4 Argon에서 패치된 정산 엔진 위에 인메모리 REST 핸들러, 50스레드 동시 결제·환불 부하 테스트, 무결성 검증 리포트 생성기까지 단일 턴으로 끊김 없이 구축해보세요.</p>
               </details>
             </div>
           </article>
@@ -690,8 +643,8 @@
       document.getElementById('btn90').classList.toggle('active', m === '90');
       document.getElementById('btn180').classList.toggle('active', m === '180');
       const map = m === '90'
-        ? { p0: '10분', p1: '30분', p2: '30분', p3: '20분' }
-        : { p0: '20분', p1: '55분', p2: '60분', p3: '45분' };
+        ? { p0: '10분', p1: '30분', p2: '25분', p3: '25분' }
+        : { p0: '20분', p1: '55분', p2: '50분', p3: '55분' };
       Object.entries(map).forEach(([k, v]) => {
         document.querySelectorAll(`.t-${k}`).forEach(el => el.textContent = v);
       });

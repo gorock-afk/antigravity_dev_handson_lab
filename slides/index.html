@@ -19,9 +19,6 @@
     h2 { font-size: clamp(22px, 2.5vw, 32px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
     .sub { font-size: clamp(14px, 1.4vw, 18px); color: #374151; margin-top: 6px; }
     .stage { flex: 1; margin-top: 22px; display: flex; align-items: stretch; gap: 18px; min-height: 0; }
-    .box { flex: 1; background: #F3F4F6; border: 1px solid #E5E7EB; padding: 20px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
-    .box-hdr { background: #E8F0FE; color: #174EA6; font-weight: 800; font-size: 15px; padding: 8px 12px; border-radius: 6px; display: inline-block; align-self: flex-start; }
-    .box-hdr.slate { background: #E5E7EB; color: #111827; }
     .shot-stage { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; background: #F9FAFB; border: 1px solid #E5E7EB; padding: 10px; }
     .shot-stage img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px; }
     table.stbl { width: 100%; border-collapse: collapse; font-size: clamp(13px, 1.2vw, 16px); background: #fff; }
@@ -47,7 +44,7 @@
     <section class="slide divider active" data-title="오프닝 · 강의 목표">
       <span class="tag">🚀 GOOGLE ANTIGRAVITY × GEMINI 4 ARGON</span>
       <h1>Argon 강점 체험 및<br>Antigravity 편의 기능 핸즈온</h1>
-      <p class="sub" style="margin-top:16px;">단일 프롬프트 3D·벤치마크 비교부터 크롬 자율 디버깅, 멀티에이전트 분업까지 (90분 기본 / 180분 심화)</p>
+      <p class="sub" style="margin-top:16px;">기업 계정 로그인부터 크롬 자율 디버깅, 실무 벤치마크 프롬프팅, 멀티에이전트 분업까지 (90분 기본 / 180분 심화)</p>
     </section>
 
     <!-- Slide 1 -->
@@ -59,8 +56,8 @@
           <tbody>
             <tr><td><strong>Part 0. 환경 세팅 &amp; 제어</strong></td><td>10분 / 20분</td><td>기업 계정 로그인 전원 완주 (CLI · AGY 2.0 · VS Code) &amp; 실시간 조향</td><td>Use Business Account, Turbo, /btw</td></tr>
             <tr><td><strong>Part 1. 자율 디버깅 루프</strong></td><td>30분 / 55분</td><td>역질문 인터뷰 ➔ 플랜 인라인 첨삭 ➔ 크롬 E2E 자동 패치 ➔ 인라인 위젯</td><td>/grill-me, /plan, /browser, /goal, /generative_ui</td></tr>
-            <tr><td><strong>Part 2. Argon &amp; 3D 비교</strong></td><td>30분 / 60분</td><td>3.8 Flash ↔ 4 Argon 전환 · 벤치마크 태스크 · Claude 대비 토큰 효율 데모</td><td>Gemini 4 Argon, /token-stats, 2×2 3D Arena</td></tr>
-            <tr><td><strong>Part 3. 멀티에이전트 자산화</strong></td><td>20분 / 45분</td><td>Worker 1➔2 교차 검증 · 파일 독점 병렬 구현 · 규칙 저장 &amp; 플러그인 패키징</td><td>/boost, /teamwork, /learn, /plugin</td></tr>
+            <tr><td><strong>Part 2. 모델 전환 &amp; 벤치마크</strong></td><td>25분 / 50분</td><td>3.8 Flash ↔ 4 Argon 실무 대시보드 비교 · 설계도➔코드 &amp; 동시성 버그 감사</td><td>Gemini 4 Argon, /context, /token-stats</td></tr>
+            <tr><td><strong>Part 3. 멀티에이전트 자산화</strong></td><td>25분 / 55분</td><td>Worker 1➔2 교차 검증 · 파일 독점 병렬 구현 · 규칙 저장 &amp; 플러그인 패키징</td><td>/boost, /teamwork, /learn, /plugin</td></tr>
           </tbody>
         </table>
       </div>
@@ -113,31 +110,31 @@
     </section>
 
     <!-- Slide 8 -->
-    <section class="slide divider" data-title="Part 2 · 모델 & 3D 생성 비교">
-      <span class="tag">🧪 PART 2 · 30 MIN</span>
-      <h1>Gemini 3.8 Flash vs 4 Argon<br>3D·물리 구현 &amp; 토큰 효율 비교</h1>
-      <p class="sub" style="margin-top:14px;">실시간 모델 전환 · 강점 벤치마크 프롬프팅 · Claude Opus 5.5 대비 토큰 아웃풋 데모</p>
+    <section class="slide divider" data-title="Part 2 · 모델 전환 & 실무 벤치마크">
+      <span class="tag">🧪 PART 2 · 25 MIN</span>
+      <h1>Gemini 3.8 Flash vs 4 Argon<br>모델 전환 &amp; 실무 벤치마크 프롬프팅</h1>
+      <p class="sub" style="margin-top:14px;">실시간 모델 전환 · 로컬 토큰 계측 · 설계도➔코드 및 복합 동시성 버그 감사</p>
     </section>
 
     <!-- Slide 9 -->
     <section class="slide" data-title="3.8 Flash ↔ 4 Argon 전환 및 토큰 계측">
-      <div><span class="tag">🔄 PART 2-1</span><h2>단일 프롬프트 3D·물리 비교 및 로컬 transcript.jsonl 토큰 확인</h2></div>
+      <div><span class="tag">🔄 PART 2-1</span><h2>동일 관제 대시보드 프롬프트 비교 및 로컬 transcript.jsonl 토큰 확인</h2></div>
       <div class="stage">
-        <div class="shot-stage"><img src="../assets/screenshots/part2_flash_vs_argon_tokens.png" alt="Flash vs Argon" /></div>
+        <div class="shot-stage"><img src="../assets/screenshots/part2_flash_vs_argon_web.png" alt="Flash vs Argon" /></div>
       </div>
     </section>
 
     <!-- Slide 10 -->
-    <section class="slide" data-title="벤치마크 & Claude 대비 토큰 효율 데모">
-      <div><span class="tag">📊 PART 2-2 · DEMO</span><h2>Argon·Carbon 강점 벤치마크 &amp; Claude Opus 5.5 대비 3D 토큰 효율</h2></div>
+    <section class="slide" data-title="실무 벤치마크 & 토큰 최적화 전략">
+      <div><span class="tag">📊 PART 2-2</span><h2>Argon·Carbon 강점 벤치마크 &amp; 70:30 하이브리드 토큰 최적화</h2></div>
       <div class="stage">
-        <div class="shot-stage"><img src="../assets/screenshots/part2_benchmark_and_opus_demo.png" alt="벤치마크 및 토큰 비교" /></div>
+        <div class="shot-stage"><img src="../assets/screenshots/part2_benchmarks_and_tokens.png" alt="벤치마크 및 토큰 전략" /></div>
       </div>
     </section>
 
     <!-- Slide 11 -->
     <section class="slide divider" data-title="Part 3 · 멀티에이전트 분업 & 팀 자산화">
-      <span class="tag">⚖️ PART 3 · 20 MIN</span>
+      <span class="tag">⚖️ PART 3 · 25 MIN</span>
       <h1>멀티에이전트 교차 검증·병렬 분업<br>및 팀 규칙·플러그인 자산화</h1>
       <p class="sub" style="margin-top:14px;">/boost · /teamwork · /learn · /plugin</p>
     </section>
